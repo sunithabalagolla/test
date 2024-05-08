@@ -1,0 +1,156 @@
+.home{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto ;
+
+    .overlay{
+position: absolute;
+height: 100%;
+width: 100%;
+background: rgb(47,106,127);
+top: 0;
+bottom: 0;
+z-index: 1;
+mix-blend-mode: hard-light;
+    }
+    .videoReplace{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+    }
+    .homeContent{
+        width: 100%;
+        height: max-content;
+        padding: 8rem 1.5rem 3rem; /* Adjust the padding */
+        display: flex;
+        row-gap: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        margin: auto;
+        color: white;
+        z-index: 100;
+    }
+    .textDiv{
+        padding: 2rem 0;
+        .smallText{
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        .homeTitle{
+            position: relative;
+            font-size: 1.8rem;
+
+        }
+    }
+    /* .carDiv{
+        position: relative;
+        padding:1rem 1rem;
+        background: white;
+        border-radius: 10px;
+        gap:0.5rem;
+        width: 20%; 
+        margin: auto;
+
+        label{
+            display: block;
+            color: var(--textColor);
+            padding-bottom: 10px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .input{
+            height: 30px; 
+            padding: 0 0.5rem; 
+            background-color: var(--inputColor);
+            border-radius: 9px;
+            border: 1px solid black;
+            input{
+                background: none;
+                border: none;
+                border-radius: 3rem;
+                outline: none;
+                width: calc(100% - 30px); 
+                font-size: 13px;
+                font-weight: 500;
+                &::placeholder {
+                    font-size: 13px;
+                }
+                .icons {
+                    font-size: 18px;
+                    color: black;
+                }
+            }
+        }
+    } */
+    .carDiv {
+        position: relative;
+        padding: 1rem; /* Adjust padding if needed */
+        background: white;
+        border-radius: 10px;
+        gap: 0.5rem;
+        width: 100%; /* Set default width to 100% */
+        display: flex;
+        flex-wrap: wrap; /* Allow flex items to wrap */
+        justify-content: space-between; /* Distribute items evenly */
+        margin: auto; /* Center the div horizontally */
+    
+        /* Adjust width and margin for smaller devices */
+        @media (max-width: 768px) {
+            width: 90%;
+            gap: 0.2rem;
+        }
+    
+        /* Adjust width and margin for even smaller devices */
+        @media (max-width: 576px) {
+            width: 100%;
+            flex-direction: column; /* Stack items vertically */
+            gap: 1rem;
+        }
+    
+        label {
+            display: block;
+            color: var(--textColor);
+            padding-bottom: 10px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+    
+        .input {
+            flex: 1; /* Make inputs flexible */
+            height: 30px; /* Adjust the height */
+            padding: 0 0.5rem; /* Adjust the padding */
+            background-color: var(--inputColor);
+            border-radius: 9px;
+            border: 1px solid black;
+    width: 100%;
+            
+        }
+      
+    
+        input {
+            background: none;
+            border: none;
+            border-radius: 3rem;
+            outline: none;
+            font-size: 13px;
+            font-weight: 500;
+    width: 100%;
+            &::placeholder {
+                font-size: 13px;
+            }
+    
+            .icons {
+                font-size: 18px;
+                color: black;
+            }
+        }
+    }
+    
+}
